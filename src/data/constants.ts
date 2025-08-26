@@ -1,0 +1,5 @@
+export const PRECIO_ACPM = 10876;
+export const PAGO_CONDUCTOR_DIA = 180000;
+export const PAGO_CONDUCTOR_AUXILIAR_DIA = 150000;
+export const SEGURO_VIAJE = 85000;
+export const MANTENIMIENTO_KM = 120;
