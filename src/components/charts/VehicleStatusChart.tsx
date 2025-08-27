@@ -2,7 +2,13 @@ import { vehicles } from "../../data/vehicles";
 
 export default function VehicleStatusChart() {
     const vehiculosPorEstado = vehicles.reduce((acc, vehicle) => {
-        acc[vehicle.estado] = (acc[vehicle.estado] || 0) + 1;
+        // Normalizamos estados
+        const estadoNormalizado =
+            vehicle.estado === "Excelente" || vehicle.estado === "Bueno"
+                ? "Operativo"
+                : "Mantenimiento";
+
+        acc[estadoNormalizado] = (acc[estadoNormalizado] || 0) + 1;
         return acc;
     }, {} as Record<string, number>);
 
@@ -26,11 +32,7 @@ export default function VehicleStatusChart() {
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-2">
                                 <div
-                                    className={`h-2 rounded-full ${estado === "Excelente"
-                                        ? "bg-green-500"
-                                        : estado === "Bueno"
-                                            ? "bg-blue-500"
-                                            : "bg-yellow-500"
+                                    className={`h-2 rounded-full ${estado === "Operativo" ? "bg-green-500" : "bg-orange-500"
                                         }`}
                                     style={{ width: `${(cantidad / vehicles.length) * 100}%` }}
                                 ></div>

@@ -2,8 +2,7 @@ import { demandData } from "../../data/demandData";
 
 export default function KpiSection() {
     // Calcular KPIs importantes
-    const entregasOntiempo = demandData.filter(d => d.entregadoATiempo).length;
-    const tasaCumplimiento = demandData.length > 0 ? (entregasOntiempo / demandData.length) * 100 : 0;
+    const tasaCumplimiento = 90; // Fijo en 90%
 
     const ingresosTotales = demandData.reduce((sum, d) => sum + d.ingresosEstimados, 0);
     const volumenTotal = demandData.reduce((sum, d) => sum + d.volumen, 0);
@@ -17,7 +16,7 @@ export default function KpiSection() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-700">{tasaCumplimiento.toFixed(1)}%</div>
+                    <div className="text-2xl font-bold text-blue-700">{tasaCumplimiento}%</div>
                     <div className="text-sm text-blue-600">Tasa de Cumplimiento</div>
                 </div>
 
