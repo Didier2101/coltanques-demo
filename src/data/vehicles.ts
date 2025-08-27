@@ -16,7 +16,7 @@ export const vehicles: Vehicle[] = [
     {
         id: 1,
         placa: "XYZ-123",
-        tipo: "Tractomula Cisterna",
+        tipo: "Tractomula",
         capacidad: 35,
         consumo: 3,
         licenciaRequerida: "A2",
@@ -29,7 +29,7 @@ export const vehicles: Vehicle[] = [
     {
         id: 2,
         placa: "TPQ-456",
-        tipo: "Tractomula Cisterna",
+        tipo: "Tractomula",
         capacidad: 30,
         consumo: 3,
         licenciaRequerida: "A2",
@@ -42,7 +42,7 @@ export const vehicles: Vehicle[] = [
     {
         id: 3,
         placa: "LMN-789",
-        tipo: "Camión Rígido Cisterna",
+        tipo: "Mini mula",
         capacidad: 18,
         consumo: 4,
         licenciaRequerida: "B1",
@@ -55,7 +55,7 @@ export const vehicles: Vehicle[] = [
     {
         id: 4,
         placa: "CDE-012",
-        tipo: "Tractomula Cisterna",
+        tipo: "Tractomula",
         capacidad: 32,
         consumo: 3,
         licenciaRequerida: "A2",
@@ -68,7 +68,7 @@ export const vehicles: Vehicle[] = [
     {
         id: 5,
         placa: "RTY-567",
-        tipo: "Camión Rígido Cisterna",
+        tipo: "Mini mula",
         capacidad: 15,
         consumo: 4.5,
         licenciaRequerida: "B1",
