@@ -177,7 +177,7 @@ export default function PlanificadorRutas() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-6 border border-gray-100-b border border-gray-100-gray-200 pb-3">
+                <h3 className="text-xl font-semibold text-gray-800 mb-6 border border-gray-100  pb-3">
                     Configuración de Viaje
                 </h3>
 
@@ -187,7 +187,7 @@ export default function PlanificadorRutas() {
                             Ciudad Origen
                         </label>
                         <select
-                            className="w-full border border-gray-100 border border-gray-100-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-blue-500 bg-white"
+                            className="w-full border border-gray-100 rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-blue-500 bg-white"
                             value={origen}
                             onChange={e => setOrigen(e.target.value as keyof typeof ciudades)}
                         >
@@ -204,7 +204,7 @@ export default function PlanificadorRutas() {
                             Ciudad Destino
                         </label>
                         <select
-                            className="w-full border border-gray-100 border border-gray-100-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-blue-500 bg-white"
+                            className="w-full border border-gray-100  rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-blue-500 bg-white"
                             value={destino}
                             onChange={e => setDestino(e.target.value as keyof typeof ciudades)}
                         >
@@ -222,7 +222,7 @@ export default function PlanificadorRutas() {
                             Vehículo
                         </label>
                         <select
-                            className="w-full border border-gray-100 border border-gray-100-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-blue-500 bg-white"
+                            className="w-full border border-gray-100 rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-blue-500 bg-white"
                             value={vehiculoId ?? ""}
                             onChange={e => setVehiculoId(Number(e.target.value))}
                         >
@@ -240,7 +240,7 @@ export default function PlanificadorRutas() {
                             Conductor Principal
                         </label>
                         <select
-                            className="w-full border border-gray-100 border border-gray-100-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-blue-500 bg-white"
+                            className="w-full border border-gray-100  rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-blue-500 bg-white"
                             value={conductorId ?? ""}
                             onChange={e => setConductorId(Number(e.target.value))}
                         >
@@ -255,7 +255,7 @@ export default function PlanificadorRutas() {
                 </div>
 
                 {necesitaRelevo && (
-                    <div className="bg-red-50 border border-gray-100 border border-gray-100-red-200 rounded-md p-4 mb-6">
+                    <div className="bg-red-50 border border-gray-100  rounded-md p-4 mb-6">
                         <div className="flex items-center mb-3">
                             <div className="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
                             <h4 className="text-sm font-semibold text-red-800">
@@ -266,7 +266,7 @@ export default function PlanificadorRutas() {
                             Esta ruta excede las 12 horas reglamentarias según normativa vigente.
                         </p>
                         <select
-                            className="w-full border border-gray-100 border border-gray-100-red-300 rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-red-500 bg-white"
+                            className="w-full border border-gray-100 rounded-md px-3 py-2 focus:outline-none focus:border border-gray-100-red-500 bg-white"
                             value={conductorAuxiliarId ?? ""}
                             onChange={e => setConductorAuxiliarId(Number(e.target.value))}
                         >
@@ -292,7 +292,7 @@ export default function PlanificadorRutas() {
                     {rutaCalculada && (
                         <button
                             onClick={() => setMostrarMapa(!mostrarMapa)}
-                            className="border border-gray-100 border border-gray-100-gray-300 text-gray-700 px-6 py-2 rounded-md font-medium hover:bg-gray-50"
+                            className="border border-gray-100  text-gray-700 px-6 py-2 rounded-md font-medium hover:bg-gray-50"
                         >
                             {mostrarMapa ? "Ocultar Mapa" : "Mostrar Mapa"}
                         </button>
@@ -303,7 +303,7 @@ export default function PlanificadorRutas() {
             {rutaCalculada && (
                 <>
                     <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-                        <div className="px-6 py-4 border border-gray-100-b border border-gray-100-gray-200">
+                        <div className="px-6 py-4 border border-gray-100">
                             <div className="flex justify-between items-center">
                                 <h2 className="text-xl font-semibold text-gray-800">
                                     Plan de Viaje Calculado - {rutaCalculada.nombre}
@@ -336,7 +336,7 @@ export default function PlanificadorRutas() {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="bg-blue-50 border border-gray-100 border border-gray-100-blue-200 rounded-lg p-4">
+                                <div className="bg-blue-50 border border-gray-100 rounded-lg p-4">
                                     <h4 className="font-semibold text-blue-800 mb-3">Desglose de Costos</h4>
                                     <div className="space-y-2 text-sm">
                                         <div className="flex justify-between">
@@ -359,7 +359,7 @@ export default function PlanificadorRutas() {
                                             <span>Mantenimiento:</span>
                                             <span className="font-medium">{formatoCOP(rutaCalculada.costos.mantenimiento)}</span>
                                         </div>
-                                        <div className="border border-gray-100-t border border-gray-100-blue-300 pt-2 flex justify-between font-bold text-blue-800">
+                                        <div className="border border-gray-100  pt-2 flex justify-between font-bold text-blue-800">
                                             <span>Total:</span>
                                             <span>{formatoCOP(rutaCalculada.costos.total)}</span>
                                         </div>
@@ -367,7 +367,7 @@ export default function PlanificadorRutas() {
                                 </div>
 
                                 {vehiculo && (
-                                    <div className="bg-green-50 border border-gray-100 border border-gray-100-green-200 rounded-lg p-4">
+                                    <div className="bg-green-50 border border-gray-100  rounded-lg p-4">
                                         <h4 className="font-semibold text-green-800 mb-3">Vehículo Asignado</h4>
                                         <div className="space-y-1 text-sm">
                                             <div><span className="font-medium">Placa:</span> {vehiculo.placa}</div>
@@ -383,7 +383,7 @@ export default function PlanificadorRutas() {
                             </div>
 
                             {conductor && (
-                                <div className="mt-6 bg-amber-50 border border-gray-100 border border-gray-100-amber-200 rounded-lg p-4">
+                                <div className="mt-6 bg-amber-50 border border-gray-100  rounded-lg p-4">
                                     <h4 className="font-semibold text-amber-800 mb-3">Conductor Asignado</h4>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div className="space-y-1 text-sm">
@@ -410,7 +410,7 @@ export default function PlanificadorRutas() {
                                     <h4 className="font-semibold text-gray-800 mb-3">Peajes en la Ruta</h4>
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                                         {rutaCalculada.peajes.map(peaje => (
-                                            <div key={peaje.id} className="bg-gray-50 border border-gray-100 border border-gray-100-gray-200 rounded-md p-3">
+                                            <div key={peaje.id} className="bg-gray-50 border border-gray-100  rounded-md p-3">
                                                 <div className="font-medium text-gray-800">{peaje.nombre}</div>
                                                 <div className="text-sm text-gray-600">{formatoCOP(peaje.costo)}</div>
                                             </div>
@@ -423,7 +423,7 @@ export default function PlanificadorRutas() {
 
                     {mostrarMapa && rutaCalculada.coords && rutaCalculada.coords.length > 0 && (
                         <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-                            <div className="px-6 py-4 border border-gray-100-b border border-gray-100-gray-200">
+                            <div className="px-6 py-4 border border-gray-100">
                                 <h3 className="text-xl font-semibold text-gray-800">Mapa de la Ruta - OSRM</h3>
                             </div>
                             <div className="p-6">
