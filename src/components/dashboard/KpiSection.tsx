@@ -12,7 +12,7 @@ export default function KpiSection() {
     const cargasSecas = demandData.filter(d => d.tipoCarga === "Seca").length;
 
     return (
-        <div className="bg-white rounded-lg shadow-sm border p-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
             <h3 className="font-semibold text-gray-800 mb-4">Indicadores Clave de Desempeño</h3>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -54,10 +54,10 @@ export default function KpiSection() {
                                     <div className="w-full bg-gray-200 rounded-full h-2">
                                         <div
                                             className={`h-2 rounded-full ${prioridad === "Alta"
-                                                    ? "bg-red-500"
-                                                    : prioridad === "Media"
-                                                        ? "bg-yellow-500"
-                                                        : "bg-green-500"
+                                                ? "bg-red-500"
+                                                : prioridad === "Media"
+                                                    ? "bg-yellow-500"
+                                                    : "bg-green-500"
                                                 }`}
                                             style={{ width: `${percentage}%` }}
                                         ></div>
@@ -84,10 +84,10 @@ export default function KpiSection() {
                                     <div className="w-full bg-gray-200 rounded-full h-2">
                                         <div
                                             className={`h-2 rounded-full ${estado === "Completado"
-                                                    ? "bg-green-500"
-                                                    : estado === "En proceso"
-                                                        ? "bg-blue-500"
-                                                        : "bg-gray-500"
+                                                ? "bg-green-500"
+                                                : estado === "En proceso"
+                                                    ? "bg-blue-500"
+                                                    : "bg-gray-500"
                                                 }`}
                                             style={{ width: `${percentage}%` }}
                                         ></div>

@@ -17,7 +17,7 @@ export default function RevenueCostChart() {
     );
 
     return (
-        <div className="bg-white rounded-lg shadow-sm border p-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
             <h3 className="font-semibold text-gray-800 mb-4">Evolución de Ingresos vs Costos</h3>
 
             <div className="flex items-end justify-between h-64 mt-8">

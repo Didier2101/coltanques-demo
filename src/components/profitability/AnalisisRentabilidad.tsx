@@ -37,24 +37,24 @@ export default function AnalisisRentabilidad() {
 
             {/* KPIs de rentabilidad */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white rounded-lg shadow-sm border p-4 text-center">
+                <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center">
                     <div className="text-2xl font-bold text-green-600">${(ingresosTotales / 1000000).toFixed(1)}M</div>
                     <div className="text-sm text-gray-600">Ingresos Totales</div>
                 </div>
 
-                <div className="bg-white rounded-lg shadow-sm border p-4 text-center">
+                <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center">
                     <div className="text-2xl font-bold text-blue-600">${(costosEstimados / 1000000).toFixed(1)}M</div>
                     <div className="text-sm text-gray-600">Costos Estimados</div>
                 </div>
 
-                <div className="bg-white rounded-lg shadow-sm border p-4 text-center">
+                <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 text-center">
                     <div className="text-2xl font-bold text-purple-600">${(utilidadEstimada / 1000000).toFixed(1)}M</div>
                     <div className="text-sm text-gray-600">Utilidad Estimada</div>
                 </div>
             </div>
 
             {/* Margen de utilidad */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
                 <h3 className="font-semibold text-gray-800 mb-4">Margen de Utilidad</h3>
                 <div className="flex items-center justify-center">
                     <div className="relative w-48 h-48">
@@ -91,7 +91,7 @@ export default function AnalisisRentabilidad() {
             </div>
 
             {/* Rentabilidad por tipo de carga */}
-            <div className="bg-white rounded-lg shadow-sm border p-6">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
                 <h3 className="font-semibold text-gray-800 mb-4">Rentabilidad por Tipo de Carga</h3>
                 <div className="overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-200">

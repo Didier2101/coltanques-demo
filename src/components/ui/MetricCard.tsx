@@ -10,7 +10,7 @@ interface MetricCardProps {
 
 export default function MetricCard({ titulo, valor, subtitulo, tendencia }: MetricCardProps) {
     return (
-        <div className="bg-white rounded-lg shadow-sm border p-4">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
             <div className="text-gray-500 text-sm font-medium mb-1">{titulo}</div>
             <div className="text-2xl font-bold text-gray-800 mb-1">{valor}</div>
             <div className="flex justify-between items-center">

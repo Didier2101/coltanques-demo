@@ -12,7 +12,7 @@ export default function VehicleStatusChart() {
     }, {} as Record<string, number>);
 
     return (
-        <div className="bg-white rounded-lg shadow-sm border p-4">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
             <h3 className="font-semibold text-gray-800 mb-4">Estado de la Flota</h3>
 
             <div className="mb-6">
@@ -27,10 +27,10 @@ export default function VehicleStatusChart() {
                             <div className="w-full bg-gray-200 rounded-full h-2">
                                 <div
                                     className={`h-2 rounded-full ${estado === "Excelente"
-                                            ? "bg-green-500"
-                                            : estado === "Bueno"
-                                                ? "bg-blue-500"
-                                                : "bg-yellow-500"
+                                        ? "bg-green-500"
+                                        : estado === "Bueno"
+                                            ? "bg-blue-500"
+                                            : "bg-yellow-500"
                                         }`}
                                     style={{ width: `${(cantidad / vehicles.length) * 100}%` }}
                                 ></div>

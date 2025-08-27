@@ -15,12 +15,12 @@ export default function AlertSection() {
     const conductoresPocoDescanso = drivers.filter(d => d.tiempoDescanso < 8);
 
     return (
-        <div className="bg-white rounded-lg shadow-sm border p-4">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
             <h3 className="font-semibold text-gray-800 mb-3">Alertas del Sistema</h3>
 
             <div className="space-y-3">
                 {vehiculosMantenimiento.length > 0 && (
-                    <div className="flex items-start p-3 bg-yellow-50 border border-yellow-200 rounded-md">
+                    <div className="flex items-start p-3 bg-yellow-50 border border-gray-100 border border-gray-100-yellow-200 rounded-md">
                         <div className="flex-shrink-0 w-5 h-5 text-yellow-600 mt-0.5">⚠️</div>
                         <div className="ml-3">
                             <h4 className="text-sm font-medium text-yellow-800">Mantenimiento Requerido</h4>
@@ -32,7 +32,7 @@ export default function AlertSection() {
                 )}
 
                 {conductoresPocoDescanso.length > 0 && (
-                    <div className="flex items-start p-3 bg-red-50 border border-red-200 rounded-md">
+                    <div className="flex items-start p-3 bg-red-50 border border-gray-100 border border-gray-100-red-200 rounded-md">
                         <div className="flex-shrink-0 w-5 h-5 text-red-600 mt-0.5">⏱️</div>
                         <div className="ml-3">
                             <h4 className="text-sm font-medium text-red-800">Tiempo de Descanso Insuficiente</h4>
@@ -43,7 +43,7 @@ export default function AlertSection() {
                     </div>
                 )}
 
-                <div className="flex items-start p-3 bg-blue-50 border border-blue-200 rounded-md">
+                <div className="flex items-start p-3 bg-blue-50 border border-gray-100 border border-gray-100-blue-200 rounded-md">
                     <div className="flex-shrink-0 w-5 h-5 text-blue-600 mt-0.5">ℹ️</div>
                     <div className="ml-3">
                         <h4 className="text-sm font-medium text-blue-800">Optimización de Rutas</h4>

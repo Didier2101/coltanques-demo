@@ -14,7 +14,7 @@ export default function DemandChart() {
     }, {} as Record<string, number>);
 
     return (
-        <div className="bg-white rounded-lg shadow-sm border p-4">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
             <h3 className="font-semibold text-gray-800 mb-4">Distribución de Demanda</h3>
 
             <div className="mb-6">
